@@ -1,3 +1,4 @@
+// response object for all API responses
 class ApiResponse {
     constructor(statusCode = 200,data = {},message = ''){
         this.statusCode = statusCode;
