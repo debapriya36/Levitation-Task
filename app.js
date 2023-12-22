@@ -12,7 +12,7 @@ const blogRouter = require('./routes/blog.route.js');
 
 // global middlewares
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // connect to mongodb database
@@ -32,6 +32,19 @@ app.use(apiLimiter);
 app.use('/api/v1/user/', userRouter);
 app.use('/api/v1/blog/', blogRouter);
 
+// home route
+app.get('/', (_, res) => {
+    res.status(200).json({
+        "message": "Welcome to the Blog API"
+    })
+})
+
+// 404 route 
+app.use('*', (_, res) => {
+    res.status(404).json({
+        "message": "Route not found"
+    })
+})
 
 
-app.listen(PORT,()=> console.log(`⚙️  Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`⚙️  Server running on port ${PORT}`));
