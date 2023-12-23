@@ -61,10 +61,9 @@ npm install
 │   └── book.js
 ├── middlewares
 │   ├── auth.middleware.js
-├── utility
-│   ├── ApiResponse.utils.js
-│   └── ApiError.utils.js
-│  
+└── utility
+    ├── ApiResponse.utils.js
+    └── ApiError.utils.js  
 
 ```
 
