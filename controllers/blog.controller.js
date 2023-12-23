@@ -20,7 +20,7 @@ const createBlog = async (req, res) => {
             {
                 title,
                 content,
-                creator: reqUserId
+                creatorId: reqUserId
             }
         );
         const user = await User.findByIdAndUpdate({
@@ -154,6 +154,7 @@ const updateBlogContent = async (req, res) => {
 const deleteBlog = async (req , res) => {
     try {
         const { blogId } = req.body;
+        const reqUserId = req.user._id;
         if (!blogId) {
             throw new ApiError(400, "Please provide blog Id");
         }
@@ -163,6 +164,26 @@ const deleteBlog = async (req , res) => {
         if (!deletedBlog) {
             throw new ApiError(400, "Blog not found");
         }
+        const user = await User.findByIdAndUpdate(
+            {
+                _id : reqUserId
+            },
+            {
+                $pull : {
+                    createdBlogs : blogId
+                
+                }
+            },
+            {
+                new : true
+            }
+        );
+        
+        console.log({
+            user,
+            deletedBlog
+        });
+
         return res.status(200).json(
             new ApiResponse(
                 200,
