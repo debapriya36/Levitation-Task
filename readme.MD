@@ -49,33 +49,23 @@ npm install
 .
 ├── app.js
 ├── package.json
-├── bin
-│   └── www
 ├── controllers
-│   ├── AuthController.js
-│   └── BookController.js
+│   ├── user.controller.js
+│   └── blog.controller.js
 ├── models
-│   ├── BookModel.js
-│   └── UserModel.js
+│   ├── blog.model.js
+│   └── user.model.js
 ├── routes
-│   ├── api.js
-│   ├── auth.js
+│   ├── user.route.js
+│   ├── blog.route.js
 │   └── book.js
 ├── middlewares
-│   ├── jwt.js
-├── helpers
-│   ├── apiResponse.js
-│   ├── constants.js
-│   ├── mailer.js
-│   └── utility.js
-├── test
-│   ├── testConfig.js
-│   ├── auth.js
-│   └── book.js
-└── public
-    ├── index.html
-    └── stylesheets
-        └── style.css
+│   ├── auth.middleware.js
+├── utility
+│   ├── ApiResponse.utils.js
+│   └── ApiError.utils.js
+│  
+
 ```
 
 ## How to run
