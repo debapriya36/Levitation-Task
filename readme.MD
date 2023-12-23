@@ -1,19 +1,11 @@
-## Features
+## Levitation-Blog-API
 
 - Basic Authentication (Register/Login with hashed password)
-- Account confirmation with 4 (Changeable) digit OTP.
-- Email helper ready just import and use.
-- JWT Tokens, make requests with a token after login with `Authorization` header with value `Bearer yourToken` where `yourToken` will be returned in Login response.
+- JWT Tokens ( RefreshToken & AccessToken), make requests with a token after login with `Authorization` header with value `Bearer yourToken` where `yourToken` will be returned in Login response.
 - Pre-defined response structures with proper status codes.
-- Included CORS.
-- **Book** example with **CRUD** operations.
 - Validations added.
-- Included API collection for Postman.
+- API collection for Postman.
 - Light-weight project.
-- Test cases with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/).
-- Code coverage with [Istanbuljs (nyc)](https://istanbul.js.org/).
-- Included CI (Continuous Integration) with [Travis CI](https://travis-ci.org).
-- Linting with [Eslint](https://eslint.org/).
 
 ## Software Requirements
 
@@ -24,10 +16,10 @@
 
 ### Using Git (recommended)
 
-1.  Clone the project from github. Change "myproject" to your project name.
+1.  Clone the project from github.
 
 ```bash
-git clone https://github.com/maitraysuthar/rest-api-nodejs-mongodb.git ./myproject
+git clone https://github.com/debapriya36/Levitation-Task.git
 ```
 
 ### Using manual download ZIP
@@ -38,7 +30,6 @@ git clone https://github.com/maitraysuthar/rest-api-nodejs-mongodb.git ./myproje
 ### Install npm dependencies after installing (Git or manual download)
 
 ```bash
-cd myproject
 npm install
 ```
 
