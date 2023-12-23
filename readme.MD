@@ -1,7 +1,7 @@
 ## Levitation-Blog-API
 
 - Basic Authentication (Register/Login with hashed password)
-- JWT Tokens ( RefreshToken & AccessToken), make requests with a token after login with `Authorization` header with value `Bearer yourToken` where `yourToken` will be returned in Login response.
+- JWT Tokens ( RefreshToken & AccessToken), make requests with a token after login with `Authorization` header with value `Bearer yourAccessToken` where `yourAccessToken` will be returned in Login response.
 - Pre-defined response structures with proper status codes.
 - Validations added.
 - API collection for Postman.
