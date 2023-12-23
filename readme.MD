@@ -72,14 +72,14 @@ npm install
 ### Running API server locally
 
 ```bash
-npm run dev
+npm run start
 ```
 
-You will know server is running by checking the output of the command `npm run dev`
+You will know server is running by checking the output of the command `npm run start`
 
 ```bash
-Connected to mongodb:YOUR_DB_CONNECTION_STRING
-App is running ...
+⚙️  Server running on port 8000
+MongoDB connected: ac-6lhjwcx-shard-00-00.up0olpx.mongodb.net
 
 Press CTRL + C to stop the process.
 ```
